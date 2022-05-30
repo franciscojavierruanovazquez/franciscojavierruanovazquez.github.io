@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="avatar2.ico">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-social.css">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/botones.css">
+<link rel="stylesheet" href="css/card.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<script>         
+        // Function to add event listener to t
+        function load() { 
+            var today = new Date();
+            var dd = today.getDate();
+            months = new Array('Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Agos', 'Sept', 'Oct', 'Nov', 'Dic');
+            var mm = today.getMonth(); //January is 0!
+            var yyyy = today.getFullYear();
+ 
+            document.getElementById("day").innerHTML = dd;
+            document.getElementById("month").innerHTML = months[mm];
+            document.getElementById("year").innerHTML = yyyy; 
+			
+			
+			var d = new Date();
+			var n = d.getDay();
+			
+			lunes = new Array("LUNES: ","1º. - ","2º. - ","3º. - ","RECRE. - ","4º. - ","5º. - ","6º. -");
+			martes = new Array("MARTES: ","1º. - ","2º. - ","3º. - ","4º. - ","5º. - ","6º. -");
+			miercoles = new Array("MIÉRCOLES: ","1º. - ","2º. - ","3º. - ","4º. - ","5º. - ","6º. -");
+			jueves = new Array("JUEVES: ","1º. - ","2º. - ","3º. - ","4º. - ","5º. - ","6º. -");
+			viernes = new Array("VIERNES: ","1º. - ","2º. - ","3º. - ","RECRE. - ","4º. - ","5º. - ","6º. -");
+			
+			var hhh = "";
+			switch(n){
+				case 1:
+					hhh = lunes.toString();
+					break;
+				case 2:
+					hhh = martes.toString();
+					break;
+				case 3:
+					hhh = miercoles.toString();
+					break;
+				case 4:
+					hhh = jueves.toString();
+					break;
+				case 5:
+					hhh = viernes.toString();
+					break;
+			}
+			
+			
+			hhh = hhh.replace(/,/g, ' ');
+			
+			document.getElementById("horario").innerHTML = hhh;
+        } 
+        
+        document.addEventListener("DOMContentLoaded", load, false);
+</script>
+
+<title>FJRV</title>
+</head>
+<body style="background-color: white">
+	<div class="container text-center">
+		<div class="row">
+            <div class="col">
+                <div class="mx-auto text-primary">
+                    <ul class="event-list">
+                    <li>
+                        <time datetime="2014-07-20">
+                            <span class="day" id="day"></span>
+                            <span class="month" id="month"></span>
+                            <span class="year" id="year"></span>
+							<span id="days"></span>D <span id="hours"></span>H <span id="minutes"></span>M
+                        </time>
+                        <img alt="FJRV" src="yoyo.jpg" onclick="window.open('https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin', '_blank');" />
+                        <div class="info">
+                            <h2 class="title">Francisco Javier Ruano Vázquez</h2>
+                            <p class="desc">Grado en Ingeniería Informática</p>
+                            <p class="desc">Postgrado Master en Ingeniería y Tecnología del Software</p>
+                            <p class="desc">Ingeniero Técnico en Informática de Gestión</p>
+                            <p class="desc">Trinity College London - ISE II (B2) Inglés</p>
+                        </div>
+                        <div class="social">
+                            <ul>
+                                <li class="facebook" style="width:33%;"><a href="https://www.linkedin.com/in/fcojavierruano" target="_blank"><span class="fab fa-linkedin"></span></a></li>
+                                <li>
+                                        <a href="#" id="pop">
+                                                <span class="fas fa-table"></span></a>
+                                            </a>
+                                            
+                                            <!-- Creates the bootstrap modal where the image will appear -->
+                                            <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <img src="HORARIO.jpg" class="enlargeImageModalSource" style="width: 100%;" >
+                                                </div>
+                                                
+                                                </div>
+                                            </div>
+                                            </div>
+                                </li>
+								<li class="facebook" style="width:33%;"><a href="temporizador/index.html" target="_blank"><span class="fas fa-clock"></span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-auto">
+				<div class="mx-auto text-primary">
+					<ul class="event-list">
+					<li>
+						<div class="info">
+							<p class="desc"><a href="https://www.altair.edu.es/" target="_blank">C.D.P. Altair (2007-2018)</a></p>
+							<p class="desc"><a href="https://www.iesciudadjardin.es/" target="_blank">IES Ciudad Jardín (2018-2019)</a></p>
+							<p class="desc"><a href="https://blogsaverroes.juntadeandalucia.es/iesmargaritasalas/" target="_blank">IES Margarita Salas (2019-2020)</a></p>
+							<p class="desc"><a href="https://blogsaverroes.juntadeandalucia.es/iestriana/" target="_blank">IES Triana (2020)</a></p>
+						</div>
+					</li>
+					</ul>
+				</div>
+            </div>
+			
+        </div>
+		<div class="row">
+			<div class="col">
+				<div class="mx-auto text-primary">
+					<div class="alert alert-primary alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<span class="horario" id="horario"></span>
+					</div>
+                </div>
+            </div>
+		</div>
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border text-primary">Junta de Andalucía</legend>
+		<div class="row" style="margin-top: 30px">
+            <div class="col">
+                <a href="https://www.juntadeandalucia.es/educacion/portalseneca/web/seneca/inicio" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> SÉNECA / PASEN</a>
+            </div>
+	    <div class="col">
+                <a href="https://www.juntadeandalucia.es/educacion/senecav2/seneca/jsp/portal/" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> SÉNECA / PASEN (NEW)</a>
+            </div>
+            <div class="col">
+                <a href="https://www.juntadeandalucia.es/educacion/portaldocente/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> PORTAL DOCENTE</a>
+            </div>
+            <div class="col">
+                <a href="https://colaboraeducacion30.juntadeandalucia.es/educacion/colabora/" class="btn-block btn btn-info btn-lg btn-huge" target="_blank"> COLABORA</a>
+            </div>
+            <div class="col">
+                <a href="https://www.juntadeandalucia.es/educacion/apl/dipa/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> DIPA</a>
+            </div>
+	        <div class="col">
+                <a href="http://destinosceja.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> DESTINOS CEJA</a>
+            </div>
+            <div class="col">
+                <a href="http://www.juntadeandalucia.es/educacion/portals/web/ced" class="btn-block btn btn-warning btn-lg btn-huge" target="_blank"> JUNTA DE ANDALUCÍA - NOVEDADES</a>
+            </div>
+            <div class="col">
+                <a href="https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza" class="btn-block btn btn-info btn-lg btn-huge" target="_blank"> JUNTA DE ANDALUCÍA - FP</a>
+            </div>
+        </div>
+        </fieldset>
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border text-primary">Formación</legend>
+        <div class="row" style="margin-top: 30px">
+			<div class="col">
+                <a href="https://classroom.google.com/?hl=es" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> <i class="fas fa-brain"></i> CLASSROOM</a>
+			</div>
+            <div class="col">
+                <a href="https://www.youtube.com/?gl=ES" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> <i class="fab fa-youtube"></i> YOUTUBE</a>
+			</div>
+            <div class="col">
+                <a href="https://drive.google.com/?authuser=0" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> <i class="fab fa-google-drive"></i> DRIVE</a>
+			</div>
+            <div class="col">
+                <a href="https://meet.google.com/?hs=197&pli=1&authuser=0" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> <i class="fas fa-video"></i> MEET</a>
+			</div>
+            <div class="col">
+                <a href="https://chat.google.com/" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> <i class="fas fa-comments"></i> CHAT</a>
+			</div>
+            <div class="col">
+                <a href="https://educacionadistancia.juntadeandalucia.es/profesorado/" class="btn-block btn btn-warning btn-lg btn-huge" target="_blank"> AULA VIRTUAL A DISTANCIA</a>
+			</div>
+            <div class="col">
+                <a href="http://www.juntadeandalucia.es/educacion/permanente/materiales/index.php" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> AULA EDUCACIÓN PERMANENTE</a>
+            </div>
+            <div class="col">
+                <a href="https://openwebinars.net/" class="btn-block btn btn-secondary btn-lg btn-huge" target="_blank"> OPENWEBINARS</a>
+            </div>
+            <div class="col">
+                <a href="https://awsacademy.instructure.com/login/canvas" class="btn-block btn btn-info btn-lg btn-huge" target="_blank"> AWS ACADEMY</a>
+            </div>
+        </div>	
+        </fieldset>
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border text-primary">Centros</legend>
+        <div class="row" style="margin-top: 30px">
+			<div class="col">
+                <a href="http://www.juntadeandalucia.es/educacion/vscripts/centros/index.asp" class="btn-block btn btn-info btn-lg btn-huge" target="_blank"> CENTROS</a>
+            </div>
+            <div class="col">
+                <a href="https://www.juntadeandalucia.es/educacion/educasig/escolarizacion/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> EDUCASIG</a>
+            </div>
+            <div class="col">
+                <a href="http://geo.iescdl.es/" class="btn-block btn btn-success btn-lg btn-huge" target="_blank"> CENTROS OPOSICIONES</a>
+            </div>
+        </div>
+        </fieldset>
+		
+		<fieldset class="scheduler-border">
+            <legend class="scheduler-border text-primary">Proyectos</legend>
+        <div class="row text-left" style="margin-top: 30px">
+            <div class="col">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action flex-column align-items-start active text-white" href="https://gestion.iesmargaritasalas.org/" target="_blank">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">WEB GESTIÓN IES MARGARITA SALAS</h5>
+                        <small>Mayo, 2019</small>
+                      </div>
+                      <p class="mb-1">Web en PHP para el control integral de todos los aspectos del profesorado dentro del centro educativo</p>
+                    </a>
+                    <a class="list-group-item list-group-item-action flex-column align-items-start" href="https://gestion.iestriana.com/" target="_blank">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">WEB GESTIÓN IES TRIANA</h5>
+                          <small>Mayo, 2021</small>
+                        </div>
+                        <p class="mb-1">Web en PHP para el control integral de todos los aspectos del profesorado dentro del centro educativo</p>
+                      </a>
+                    <a class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">APP VIDA SALUDABLE</h5>
+                        <small class="text-muted">Junio, 2019</small>
+                      </div>
+                      <p class="mb-1">APP Android para el control de las vueltas al centro que dan los alumnos durante el recreo. El profesor puede tener un listado de las vueltas de los alumnos para premiar el movimiento de los alumnos</p>
+                    </a>
+                    <a class="list-group-item list-group-item-action flex-column align-items-start" href="https://recicla.iesmargaritasalas.org/" target="_blank">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">WEB y APP RECICLA</h5>
+                        <small class="text-muted">Enero, 2020</small>
+                      </div>
+                      <p class="mb-1">Web en PHP para incentivar el reciclado de materiales dentro del centro educativo. Los alumnos son puntuados por parte de los profesores</p>
+                    </a>
+                  </div>
+            </div>
+        </div>
+        </fieldset>
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border text-primary">Apps y Webs</legend>
+            <div class="row" style="margin-top: 30px">
+			<div class="col">
+                <a href="https://github.com/" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> GITHUB</a>
+            </div>
+	    <div class="col">
+                <a href="https://web.whatsapp.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> WHATSAPP WEB</a>
+            </div>
+            <div class="col">
+                <a href="https://classroom.github.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> GITHUB CLASSROOM</a>
+            </div>
+			<div class="col">
+                <a href="https://git-scm.com/download" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> GIT</a>
+            </div>
+			<div class="col">
+                <a href="https://script.google.com/home" class="btn-block btn btn-warning btn-lg btn-huge" target="_blank"> GOOGLE SCRIPT</a>
+            </div>
+			<div class="col">
+                <a href="https://www.remind.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> REMIND</a>
+            </div>
+            <div class="col">
+                <a href="https://kahoot.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> KAHOOT</a>
+            </div>
+            <div class="col">
+                <a href="https://office.live.com/start/Word.aspx?ui=es-ES" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> OFFICE LIVE</a>
+            </div>
+			<div class="col">
+                <a href="https://www.eclipse.org/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> ECLIPSE</a>
+            </div>
+			<div class="col">
+                <a href="https://tomcat.apache.org/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> TOMCAT</a>
+            </div>
+			<div class="col">
+                <a href="https://getbootstrap.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> BOOTSTRAP</a>
+            </div>
+			<div class="col">
+                <a href="https://bootsnipp.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> BOOTSNIPP</a>
+            </div>
+			<div class="col">
+                <a href="https://fontawesome.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> FONTAWESOME</a>
+            </div>
+			<div class="col">
+                <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> MYSQL</a>
+            </div>
+			<div class="col">
+                <a href="https://www.apachefriends.org/es/index.html" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> XAMPP</a>
+            </div>
+			<div class="col">
+                <a href="https://code.visualstudio.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> VISUAL STUDIO CODE</a>
+            </div>
+			<div class="col">
+                <a href="http://appinventor.mit.edu/explore/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> APP INVENTOR</a>
+            </div>
+			<div class="col">
+                <a href="https://scratch.mit.edu/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> SCRATCH</a>
+            </div>
+			<div class="col">
+                <a href="http://basex.org/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> BASEX</a>
+            </div>
+			<div class="col">
+                <a href="http://php.net/manual/es/" class="btn-block btn btn-danger btn-lg btn-huge" target="_blank"> PHP</a>
+            </div>
+			<div class="col">
+                <a href="https://bitly.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> BITLY</a>
+            </div>
+			<div class="col">
+                <a href="https://www.db4free.net/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> DB4FREE</a>
+            </div>
+			<div class="col">
+                <a href="https://es.000webhost.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> 000webhost</a>
+            </div>
+            <div class="col">
+                <a href="https://my.freenom.com/clientarea.php" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Freenom</a>
+            </div>
+            <div class="col">
+                <a href="https://cp1.awardspace.net/login/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Adaware Space</a>
+            </div>
+            <div class="col">
+                <a href="https://www.atube.me/es/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> aTube</a>
+            </div>
+            <div class="col">
+                <a href="http://www.gimp.org.es/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Gimp</a>
+            </div>
+            <div class="col">
+                <a href="https://www.foxitsoftware.com/es-la/pdf-reader/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Foxit Reader</a>
+            </div>
+            <div class="col">
+                <a href="https://launchpad.net/kazam" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Kazam Screencaster</a>
+            </div>
+            <div class="col">
+                <a href="https://bitnami.com/stack/lamp" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Bitnami Lamp</a>
+            </div>
+            <div class="col">
+                <a href="https://docs.docker.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> Docker</a>
+            </div>
+            <div class="col">
+                <a href="https://hub.docker.com/" class="btn-block btn btn-primary btn-lg btn-huge" target="_blank"> DockerHub</a>
+            </div>
+        </div>
+        </fieldset>
+		<fieldset class="scheduler-border">
+            <legend class="scheduler-border text-primary">Centros FJRV</legend>
+			<div class="row" style="margin-top: 30px">
+				<div class="col">
+			<div class="embed-responsive embed-responsive-21by9">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1eFQppIJ2QKvOjPrlrG01jajh-FeKD7o9" width="800" height="480"></iframe></iframe>
+			</div>
+				</div>
+			</div>
+        </fieldset>
+
+        <!-- Footer -->
+        <footer class="bg-white text-center text-lg-start">        
+            <!-- Copyright -->
+            <div class="text-center p-3" >
+            © 2021 Copyright:
+            <a class="text-dark" href="https://fjrvformacion.github.io/">Francisco Javier Ruano Vázquez</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/countdown.js"></script>
+    
+    <script>
+        $("#pop").on("click", function() {
+        $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+		$('#enlargeImageModal').modal('show');
+        });
+    </script>
+</body>
+</html>

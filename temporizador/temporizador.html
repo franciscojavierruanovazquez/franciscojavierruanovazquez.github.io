@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temporizador FP</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style>
+body { background-color:#FFFFFF;}
+.container { margin:0px auto;}
+</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="row justify-content-md-left">
+		<div class="col-md-auto">
+			<div class="launcher" style="color: blue;text-align: center;border: 2px solid #FFFFFF;width: 300px;margin-top: 20px;">
+				<h3>Temporizador</h3>
+				<table>
+				<tr>
+				<td><label for="horas" style="font: normal 16px verdana !important;">Horas:</label></td><td><input type="text" class="horas form-control input-sm" style="font-size:16pt;" autofocus min="1" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"></td>
+				</tr>
+				<tr>
+				<td><label for="minutos" style="font: normal 16px verdana !important;">Minutos:</label></td><td><input type="text" class="minutos form-control input-sm" style="font-size:16pt;" min="1" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"></td>
+				</tr>
+				<tr>
+				<td><label for="segundos" style="font: normal 16px verdana !important;">Segundos:</label></td><td><input type="text" class="segundos form-control input-sm" style="font-size:16pt;" min="1" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"></td>
+				</tr>
+				<tr>
+				<td></td>
+				<td><button class="btn btn-primary" style="font: normal 16px verdana !important;">Iniciar</button></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="row justify-content-md-center">
+		<div class="col">
+			<div class="timer"></div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/circular-countdown.js"></script>
+<script src="js/mainscript.js"></script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
